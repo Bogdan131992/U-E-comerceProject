@@ -31,6 +31,7 @@ ALLOWED_HOSTS = ['8000-bogdan13199-uecomercepr-gal2fd4bb31.ws-eu104.gitpod.io']
 # Application definition
 
 INSTALLED_APPS = [
+
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -38,6 +39,9 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'category',
+    'accounts',
+    'shop'
+    
 ]
 
 MIDDLEWARE = [
@@ -70,6 +74,7 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'ecomerce.wsgi.application'
 
+AUTH_USER_MODEL = 'accounts.Account'
 
 # Database
 # https://docs.djangoproject.com/en/3.1/ref/settings/#databases
@@ -123,3 +128,8 @@ STATIC_ROOT = BASE_DIR /'static'
 STATICFILES_DIRS = [
     'ecomerce/static',
 ]
+
+# configuration for media files
+
+MEDIA_URL = '/media/'
+MEDIA_ROOT = BASE_DIR /'media'
